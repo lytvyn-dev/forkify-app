@@ -5,7 +5,7 @@
 	"default": "index.html",
 	"scripts": {
 		"start": "parcel index.html",
-		"build": "parcel build index.html"
+		"build": "parcel build index.html --dist-dir ./dist"
 	},
 	"author": "Dmytro Lytvyn",
 	"license": "ISC",
@@ -20,5 +20,5 @@
 		"fractional": "^1.0.0",
 		"regenerator-runtime": "^0.13.9"
 	},
-	"browserslist": ["last 1 chrome versions"],
+	"browserslist": ["last 1 chrome versions"]
 }
