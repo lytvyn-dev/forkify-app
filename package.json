@@ -1,12 +1,11 @@
 {
 	"name": "forkify",
 	"version": "1.0.0",
-	 "browserslist": "> 0.5%, last 2 versions, not dead",
 	"description": "recipes app",
-	"source": "index.html",
+	"default": "index.html",
 	"scripts": {
 		"start": "parcel index.html",
-		"build": "parcel build index.html"
+		"build": "parcel build index.html --dist-dir ./dist"
 	},
 	"author": "Dmytro Lytvyn",
 	"license": "ISC",
