@@ -5,12 +5,11 @@
   "default": "index.html",
   "scripts": {
     "start": "parcel index.html",
-    "build": "parcel build index.html ./dist"
+    "build": "parcel build index.html --dist-dir ./dist"
   },
-  "author": "Dmytro Lytvyn",
+  "author": "Jonas Schedtmann",
   "license": "ISC",
   "devDependencies": {
-    "@parcel/transformer-sass": "^2.7.0",
     "parcel": "^2.0.0-beta.1",
     "sass": "^1.26.10"
   },
