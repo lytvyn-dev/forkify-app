@@ -79,7 +79,7 @@ class RecipeView extends View {
 				<use href="${icons}#icon-user"></use>
 			 </svg>
 		  </div>
-		  <button class="btn--round btn--bookmark">
+		  <button class="btn--round btn--bookmark" aria-label="bookmark button button">
 			 <svg class="">
 				<use href="${icons}#icon-bookmark${recipe.bookmarked ? '-fill' : ''}"></use>
 			 </svg>

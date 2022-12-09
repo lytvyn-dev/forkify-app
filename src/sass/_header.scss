@@ -10,19 +10,16 @@
   }
 
   @media only screen and (max-width: 560px) {
-    flex-wrap: wrap;
     justify-content: center;
-    gap: 2rem;
+    align-items: center;
+    flex-direction: column;
+    gap: 3rem;
   }
 
   &__logo {
     margin-left: 4rem;
     height: auto;
     display: block;
-
-    @media only screen and (max-width: 760px) {
-      // margin-right: auto;
-    }
 
     @media only screen and (max-width: 560px) {
       position: relative;
@@ -31,7 +28,7 @@
   }
 }
 
-.sidebar-open-icon {
+.sidebar-btn {
   width: 4rem;
   position: absolute;
   top: 1rem;
@@ -40,25 +37,28 @@
 }
 
 .search {
-  background-color: #fff;
-  border-radius: 10rem;
   display: flex;
   align-items: center;
-  padding-left: 3rem;
+  // padding-left: 3rem;
   transition: all 0.3s;
 
-  &:focus-within {
-    transform: translateY(-2px);
-    box-shadow: 0 0.7rem 3rem rgba($color-grey-dark-1, 0.08);
+  @media only screen and (max-width: 560px) {
+    flex-direction: column;
+    gap: 1.5rem;
   }
 
   &__field {
+    padding: 1.5rem 0 1.5rem 3rem;
+    background-color: #fff;
+    border-radius: 10rem;
+    box-shadow: 0 0.7rem 3rem rgba($color-grey-dark-1, 0.08);
+    transform: translateX(5rem);
+
     border: none;
-    background: none;
     font-family: inherit;
     color: inherit;
     font-size: 1.7rem;
-    width: 30rem;
+    width: 40rem;
 
     &:focus {
       outline: none;
@@ -68,16 +68,22 @@
       color: $color-grey-light-3;
     }
 
-    @media only screen and (max-width: 1024px) {
-      width: auto;
+    @media only screen and (max-width: 991px) {
+      width: 25rem;
 
       &::placeholder {
         color: white;
       }
     }
+    @media only screen and (max-width: 560px) {
+      width: 35rem;
+      transform: translateX(0rem);
+    }
   }
 
   &__btn {
+    position: relative;
+    z-index: 5;
     font-weight: 600;
     font-family: inherit;
   }
@@ -91,6 +97,10 @@
     list-style: none;
     display: flex;
     height: 100%;
+
+    @media only screen and (max-width: 560px) {
+      justify-content: center;
+    }
   }
 
   &__item {
