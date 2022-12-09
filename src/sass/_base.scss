@@ -1,7 +1,9 @@
 // $color-primary: #f59a83;
 $color-primary: #f38e82;
-$color-grad-1: #fbdb89;
-$color-grad-2: #f48982;
+// $color-grad-1: #fbdb89;
+$color-grad-1: #9775fa;
+// $color-grad-2: #f48982;
+$color-grad-2: #faa2c1;
 
 $color-grey-light-1: #f9f5f3; // Light background
 $color-grey-light-2: #f2efee; // Light lines
@@ -15,6 +17,15 @@ $bp-large: 78.15em; // 1250px
 $bp-medium: 61.25em; // 980px
 $bp-small: 37.5em; // 600px
 $bp-smallest: 31.25em; // 500px
+
+// "xs": 360px,
+// "sm": 560px,
+// "md": 768px,
+// "md1": 991px,
+// "md-wide": 1024px,
+// "lg": 1248px,
+// "xl": 1680px,
+// "xxl": 1920px,
 
 * {
   margin: 0;
@@ -49,7 +60,7 @@ body {
 
 .container {
   max-width: 120rem;
-  min-height: 117rem;
+  // min-height: 117rem;
   margin: 4vw auto;
   background-color: #fff;
   border-radius: 9px;
@@ -57,8 +68,8 @@ body {
   box-shadow: 0 2rem 6rem 0.5rem rgba($color-grey-dark-1, 0.2);
 
   display: grid;
-  grid-template-rows: 10rem minmax(100rem, auto);
   grid-template-columns: 1fr 2fr;
+  grid-template-rows: 10rem minmax(100rem, auto);
   grid-template-areas:
     'head head'
     'list recipe';
@@ -67,5 +78,10 @@ body {
     max-width: 100%;
     margin: 0;
     border-radius: 0;
+  }
+
+  @media only screen and (max-width: 768px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
   }
 }

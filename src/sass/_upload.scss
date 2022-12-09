@@ -11,6 +11,13 @@
   box-shadow: 0 4rem 6rem rgba(0, 0, 0, 0.25);
   z-index: 1000;
   transition: all 0.5s;
+  overflow-y: auto;
+
+  @media only screen and (max-width: 768px) {
+    width: 95vw;
+    height: 95vh;
+    padding: 3rem 4rem;
+  }
 
   .btn--close-modal {
     font-family: inherit;
@@ -22,6 +29,11 @@
     cursor: pointer;
     border: none;
     background: none;
+
+    // @media only screen and (max-width: 768px) {
+    //   top: 1rem;
+    //   right: 2.5rem;
+    // }
   }
 }
 
@@ -46,6 +58,11 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 4rem 6rem;
+
+  @media only screen and (max-width: 560px) {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
 
   &__column {
     display: grid;
