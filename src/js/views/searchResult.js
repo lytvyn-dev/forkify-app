@@ -31,7 +31,7 @@ class SearchResult extends View {
     this._sideBar.classList.toggle('sidebar');
   }
 
-  addHandlerB() {
+  _addOpenRecipeHandler() {
     this._parentEl.addEventListener('click', this._openRecipe.bind(this));
   }
 

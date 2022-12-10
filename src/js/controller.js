@@ -35,11 +35,11 @@ const controlSearch = async function () {
     function initSideBar(e) {
       if (e.matches) {
         searchResult._toggleClass();
-        searchResult.addHandlerB();
+        searchResult._addOpenRecipeHandler();
       }
     }
 
-    sideBarQuery.addListener(initSideBar);
+    sideBarQuery.addEventListener('change', initSideBar);
     initSideBar(sideBarQuery);
 
     // searchResult._toggleClass();
