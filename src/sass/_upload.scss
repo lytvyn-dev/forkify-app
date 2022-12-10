@@ -15,8 +15,11 @@
 
   @media only screen and (max-width: 768px) {
     width: 95vw;
-    height: 95vh;
+    height: 50vh;
     padding: 3rem 4rem;
+  }
+  @media only screen and (max-width: 560px) {
+    height: 90vh;
   }
 
   .btn--close-modal {

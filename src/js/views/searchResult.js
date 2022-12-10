@@ -12,7 +12,7 @@ class SearchResult extends View {
 
   constructor() {
     super();
-    this.toggleSideBar();
+    this.toggleSideBarBtns();
   }
 
   _genereteMarkup() {
@@ -21,7 +21,7 @@ class SearchResult extends View {
       .join(' ');
   }
 
-  toggleSideBar() {
+  toggleSideBarBtns() {
     [this._closeSidebarBtn, this._openSidebarBtn].forEach(btn => {
       btn.addEventListener('click', this._toggleClass.bind(this));
     });
@@ -31,12 +31,6 @@ class SearchResult extends View {
     this._sideBar.classList.toggle('sidebar');
   }
 
-  // _openRecipe() {
-  //   this._parentEl.addEventListener('click', function (e) {
-  //     const recipe = e.target.closest('.preview__link');
-  //     if (!recipe) return;
-  //   });
-
   addHandlerB() {
     this._parentEl.addEventListener('click', this._openRecipe.bind(this));
   }
@@ -44,7 +38,7 @@ class SearchResult extends View {
   _openRecipe(e) {
     const recipe = e.target.closest('.preview__link');
     if (!recipe) return;
-    this._toggleClass();
+    this._sideBar.classList.remove('sidebar');
   }
 }
 

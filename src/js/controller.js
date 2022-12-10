@@ -54,19 +54,6 @@ const controlSearch = async function () {
 
     // 4) Render initial pagination buttons
     paginationView.render(modelState.state.search);
-
-    // // searchResult._toggleClass();
-    // searchResult.renderSpinner();
-    // // 1) Get search query
-    // const query = searchView.getQuery();
-    // if (!query) return;
-
-    // // 2) Load search results
-    // await modelState.searchResults(query);
-    // searchResult.render(modelState.getSearchResultPage());
-
-    // // 4) Render initial pagination buttons
-    // paginationView.render(modelState.state.search);
   } catch (err) {
     searchResult.renderError();
   }

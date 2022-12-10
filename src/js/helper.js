@@ -23,6 +23,8 @@ export const AJAX = async function (url, uploadData = undefined) {
     const response = await Promise.race([fetchurl, timeOut(TIMEOUT_SEC)]);
     const data = await response.json();
 
+    const sideBarBtn = document.querySelector('.sidebar-btn');
+    if (response.ok) sideBarBtn.style.pointerEvents = 'auto';
     if (!response.ok)
       throw new Error(
         `We could not find the recipe, please try another one :)`

@@ -9,12 +9,12 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     z-index: 50;
     background-color: $color-grey-light-1;
     transform: translateX(-100%);
-    overflow: auto;
+    overflow-x: hidden;
   }
 }
 
@@ -37,6 +37,7 @@
     cursor: pointer;
     border: none;
     background: none;
+    pointer-events: none;
   }
 }
 

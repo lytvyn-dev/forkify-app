@@ -30,10 +30,13 @@
 
 .sidebar-btn {
   width: 4rem;
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
   z-index: 50;
+
+  @media only screen and (max-width: 560px) {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+  }
 }
 
 .search {
@@ -86,6 +89,10 @@
     z-index: 5;
     font-weight: 600;
     font-family: inherit;
+    @media only screen and (max-width: 560px) {
+      width: 100%;
+      justify-content: center;
+    }
   }
 }
 
