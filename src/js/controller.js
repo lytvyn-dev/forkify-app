@@ -3,12 +3,11 @@ import 'regenerator-runtime';
 import recipeView from './views/reciprView';
 import * as modelState from './model.js';
 import searchView from './views/searchView';
-import { async } from 'regenerator-runtime';
 import searchResult from './views/searchResult';
 import paginationView from './views/paginationView';
 import bookmarkView from './views/bookmarkView';
 import addRecipe from './views/addRecipe';
-import { TIMEOUT_SEC, MODAl_CLOSE_SEC } from './config';
+import { MODAl_CLOSE_SEC } from './config';
 
 ///////////////////////////////////////
 //? if(module.hot){
@@ -116,8 +115,16 @@ const controlUpload = async function (newRecipe) {
   }
 };
 
+const pageLoaderHandler = () => {
+  const loading = document.querySelector('.loader');
+  window.addEventListener('load', () => {
+    loading.style.display = 'none';
+  });
+};
+
 // Handlers
 const init = function () {
+  pageLoaderHandler();
   addRecipe.addUploadHandler(controlUpload);
   bookmarkView.addBookmarkHandler(conrolBookmark);
   recipeView.addHandlerBookmarked(controlAddBookmark);

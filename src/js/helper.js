@@ -1,4 +1,3 @@
-import { async } from 'regenerator-runtime';
 import { TIMEOUT_SEC } from './config.js';
 
 const timeOut = function (sec) {
@@ -20,6 +19,7 @@ export const AJAX = async function (url, uploadData = undefined) {
           body: JSON.stringify(uploadData),
         })
       : fetch(url);
+
     const response = await Promise.race([fetchurl, timeOut(TIMEOUT_SEC)]);
     const data = await response.json();
 
